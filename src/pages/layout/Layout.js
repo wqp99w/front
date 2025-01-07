@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {NavLink, Outlet, useNavigate } from 'react-router-dom';
 import Footer from './footer/Footer';
 import S from './style';
+import SignUp from '../signUp/SignUp';
+import Login from '../login/Login';
 
 
 const Layout = () => {
@@ -35,36 +37,57 @@ const Layout = () => {
     },
   ];
 
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const handleLoginClick = () => {
+    console.log('Login 버튼 클릭됨');
+    setIsLoginOpen(true);
+  };
+
+  const handleLoginModal = () => {
+    setIsLoginOpen(false);
+  };
+
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
+  const handleSignUpClick = () => {
+    console.log('Sign Up 버튼 클릭됨');
+    setIsSignUpOpen(true);
+  };
+
+  const handleSignUpModal = () => {
+    setIsSignUpOpen(false);
+  };
+
   return (
     <div>
       <S.Background className="background">
-      <S.Header className="header">
-      <NavLink to={"/"}>
-          <h1>Nouvelle Vague</h1>
-        </NavLink>
-        <NavLink to={"/movie"}>
-          <p>영화</p>
-        </NavLink>
-        <NavLink to={"/weekmovie"}>
-          <p>이달의 영화</p>
-        </NavLink>
-        <NavLink to={"/movieblog"}>
-          <p>영화 블로그</p>
-        </NavLink>
-        <NavLink to={"/mypage"}>
-          <p>마이 페이지</p>
-        </NavLink>
-        <div className="search-bar">
-          <input type="text" placeholder="Search contents, people, collections, ..." />
-          <button>Login</button>
-          <button>Sign Up</button>
-        </div>
-      </S.Header>
-      <S.Main className="main">
+        <S.Header className="header">
+        <NavLink to={"/"}>
+            <h1>Nouvelle Vague</h1>
+          </NavLink>
+          <NavLink to={"/movie"}>
+            <p>영화</p>
+          </NavLink>
+          <NavLink to={"/weekmovie"}>
+            <p>이달의 영화</p>
+          </NavLink>
+          <NavLink to={"/movieblog"}>
+            <p>영화 블로그</p>
+          </NavLink>
+          <NavLink to={"/mypage"}>
+            <p>마이 페이지</p>
+          </NavLink>
+          <div className="search-bar">
+            <input type="text" placeholder="Search contents, people, collections, ..." />
+            <button onClick={handleLoginClick}>Login</button>
+            <button onClick={handleSignUpClick}>Sign Up</button>
+          </div>
+        </S.Header>
+        <S.Main className="main">
           <Outlet />
         </S.Main>
-    </S.Background>
-    
+      </S.Background>
+      {isLoginOpen && <Login onClose={handleLoginModal} />}
+      {isSignUpOpen && <SignUp onClose={handleSignUpModal} />}
       {/* 푸터 */}
       {/* <Footer /> */}
     </div>
