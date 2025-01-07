@@ -4,6 +4,7 @@ import MovieContainer from '../pages/movie/MovieContainer';
 import MainContainer from '../pages/main/MainContainer';
 import MovieBlogContainer from '../pages/movieblog/MovieBlogContainer';
 import WeekMovieContainer from '../pages/weekmovie/WeekMovieContainer';
+import MovieReviewContainer from '../pages/movie/moviereview/MovieReviewContainer';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path : "/weekmovie",
         element : <WeekMovieContainer/>
+      },
+      {
+        path : "/movie/moviereview/",
+        element : <MovieReviewContainer/>
       }
       
     ]
