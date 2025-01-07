@@ -32,7 +32,7 @@ const Main = () => {
   ];
   return (
     <div>
-            <S.MainContent className="main-content">
+      <S.MainContent className="main-content">
         <div className="movie-container">
           <S.title className='title'>
             <h2>상영</h2><h2 className='back'>무비</h2>
