@@ -16,7 +16,7 @@ S.wrapper = styled.div`
 S.Card = styled.div`
   min-width: 200px;
   max-width: 200px;
-  height: 340px; /* 높이를 자동으로 조정 */
+  height: 340px; 
   flex-shrink: 0;
   background: #222;
   border-radius: 10px;
@@ -24,12 +24,12 @@ S.Card = styled.div`
   position: relative;
   margin: 10px;
   display: flex;
-  flex-direction: column; /* 세로 방향으로 정렬 */
+  flex-direction: column; 
 
-  /* 이미지 */
+
   .image-container {
     width: 100%;
-    height: 310px; /* 이미지의 고정 높이 */
+    height: 310px; 
     overflow: hidden;
 
     img {
@@ -44,7 +44,7 @@ S.Card = styled.div`
     }
   }
 
-  /* 영화 제목 */
+
   .movie-title {
     font-size: 16px;
     font-weight: bold;

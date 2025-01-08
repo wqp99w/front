@@ -14,8 +14,14 @@ const MovieReview = () => {
       img: "https://web-cf-image.cjenm.com/resize/1344x756/public/share/metamng/programs/gwangwhamunlovesong-musical-ko-004-03.jpg?v=1727398714/200x300?",
       detail: "이 영화는 꿈과 희망을 나누는 이야기입니다.",
     },
-  
+    {
+      id: 2,
+      title: "강철부대",
+      img: "https://web-cf-image.cjenm.com/resize/1344x756/public/share/metamng/programs/contents-detail-image-moulin-rouge-the-musical-10.jpg?v=1678248215/200x300?",
+      detail: "줄거리리",
+    },
   ];
+
   const cast = [
     { name: "Marlon Brando", role: "Don Vito Corleone", img: "https://via.placeholder.com/100" },
     { name: "Al Pacino", role: "Michael Corleone", img: "https://via.placeholder.com/100" },
@@ -25,7 +31,6 @@ const MovieReview = () => {
     { id: 1, username: "김*우", date: "2025.01.08", content: "보면서 고민하다가... 너무 아쉬움", isEditable: false },
     { id: 2, username: "이즈잇츠", date: "2025.01.08", content: "재밌게 잘 봤습니다.", isEditable: false },
     { id: 3, username: "익명", date: "2025.01.08", content: "현빈의 역대급은 김삿갓이다.", isEditable: false },
-
   ];
 
   const [userReviews, setUserReviews] = useState(reviews);
@@ -33,13 +38,14 @@ const MovieReview = () => {
   const [newReview, setNewReview] = useState("");
   const [editingReviewId, setEditingReviewId] = useState(null);
   const [editingContent, setEditingContent] = useState("");
+  const [rating, setRating] = useState(0); // 별점 상태
 
   const handleAddReview = () => {
     if (newReview.trim() === "") return;
 
     const newReviewObj = {
       id: Date.now(),
-      username: "내 댓글", 
+      username: "내 댓글",
       date: new Date().toISOString().split("T")[0],
       content: newReview,
       isEditable: true,
@@ -50,11 +56,9 @@ const MovieReview = () => {
     setIsWriting(false);
   };
 
-  
   const handleDeleteReview = (id) => {
     setUserReviews(userReviews.filter((review) => review.id !== id));
   };
-
 
   const handleEditReview = (id) => {
     setEditingReviewId(id);
@@ -62,7 +66,6 @@ const MovieReview = () => {
     setEditingContent(reviewToEdit.content);
   };
 
- 
   const handleSaveEdit = () => {
     setUserReviews(
       userReviews.map((review) =>
@@ -75,6 +78,9 @@ const MovieReview = () => {
     setEditingContent("");
   };
 
+  const handleStarClick = (index) => {
+    setRating(index + 1); // 클릭된 별점 설정
+  };
 
   const selectedMovie = movies.find((movie) => movie.id === mvid);
 
@@ -89,16 +95,13 @@ const MovieReview = () => {
           <img src={selectedMovie.img} alt={selectedMovie.title} />
         </S.Card>
         <S.imformation className="imformation">
-          <div className="rating">
-            <span>★ ★ ★ ★ ★</span>
-            <span>4.3</span>
-          </div>
+          <h2>⭐⭐⭐⭐⭐</h2><p>평점 : 5</p>
           <div className="detail">{selectedMovie.detail}</div>
         </S.imformation>
       </S.wrapper>
 
       <S.mainpage className="mainpage">
-      <div className="actor">
+        <div className="actor">
           <h1>연기자</h1>
           <S.CastContainer className="cast-container">
             {cast.map((actor, index) => (
@@ -115,13 +118,26 @@ const MovieReview = () => {
             <h1>리뷰</h1>
             <div className="reviewbutton">
               <button onClick={() => setIsWriting(!isWriting)}>리뷰 작성</button>
-            
             </div>
           </div>
 
-        
           {isWriting && (
             <S.reviewinput className="review-input">
+               <div className="rating">
+            <div>
+              {[...Array(5)].map((_, index) => (
+                <span
+                  key={index}
+                  className={`star ${index < rating ? "active" : ""}`}
+                  style={{ cursor: "pointer", color: index < rating ? "gold" : "gray" }}
+                  onClick={() => handleStarClick(index)}
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+            <span>{rating.toFixed(1)}</span>
+          </div>
               <input
                 placeholder="리뷰를 작성하세요..."
                 value={newReview}
@@ -131,7 +147,6 @@ const MovieReview = () => {
             </S.reviewinput>
           )}
 
-        
           <div className="review-list">
             {userReviews.map((review) => (
               <S.reviewitem key={review.id} className="review-item">
@@ -140,7 +155,6 @@ const MovieReview = () => {
                   <span>{review.date}</span>
                 </div>
 
-               
                 {editingReviewId === review.id ? (
                   <div>
                     <textarea
