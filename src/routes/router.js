@@ -5,6 +5,8 @@ import MainContainer from '../pages/main/MainContainer';
 import MovieBlogContainer from '../pages/movieblog/MovieBlogContainer';
 import WeekMovieContainer from '../pages/weekmovie/WeekMovieContainer';
 import MovieReviewContainer from '../pages/movie/moviereview/MovieReviewContainer';
+import MyPageContainer from '../pages/mypage/MyPageContainer';
+import MylistConatiner from '../pages/mypage/mylist/MylistConatiner';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path : "/movie/moviereview/",
         element : <MovieReviewContainer/>
+      },
+      {
+        path : "/mypage",
+        element : <MyPageContainer/>
+      },
+      {
+        path: "/my-list",
+        element : <MylistConatiner/>
       }
       
     ]
