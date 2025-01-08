@@ -56,8 +56,5 @@ S.Card = styled.div`
 `;
 
 
-<<<<<<< HEAD
+
 export default S;
-=======
-export default S;
->>>>>>> 117dcb9f65d9700e060e67b7d4b820f3af824d97
