@@ -28,6 +28,7 @@ S.email = styled.div`
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color : #000;
   }
 `
 
@@ -39,6 +40,7 @@ S.password = styled.div`
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color : #000;
   }
 `
 

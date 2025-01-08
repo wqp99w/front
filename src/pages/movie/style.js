@@ -16,24 +16,44 @@ S.wrapper = styled.div`
 S.Card = styled.div`
   min-width: 200px;
   max-width: 200px;
-  height: 300px;
+  height: 340px; 
   flex-shrink: 0;
   background: #222;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   margin: 10px;
+  display: flex;
+  flex-direction: column; 
 
-  img {
+
+  .image-container {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    height: 310px; 
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
   }
 
-  &:hover img {
-    transform: scale(1.1);
+
+  .movie-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    padding: 5px 0;
+    background-color: black;
   }
 `;
+
 
 export default S;
