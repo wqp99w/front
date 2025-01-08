@@ -8,8 +8,11 @@ import MovieReviewContainer from '../pages/movie/moviereview/MovieReviewContaine
 import MyPageContainer from '../pages/mypage/MyPageContainer';
 import MylistConatiner from '../pages/mypage/mylist/MylistConatiner';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import CreateBlogContainer from '../pages/movieblog/Myblog/CreateBlogContainer';
 import MyBlogContainer from '../pages/movieblog/Myblog/MyBlogContainer';
+=======
+>>>>>>> 117dcb9f65d9700e060e67b7d4b820f3af824d97
 =======
 >>>>>>> 117dcb9f65d9700e060e67b7d4b820f3af824d97
 const router = createBrowserRouter([
@@ -45,6 +48,7 @@ const router = createBrowserRouter([
         path: "/my-list",
         element : <MylistConatiner/>
 <<<<<<< HEAD
+<<<<<<< HEAD
       },
       {
         path : "/createblog",
@@ -53,6 +57,8 @@ const router = createBrowserRouter([
       {
         path : "/myblog",
         element : <MyBlogContainer/>
+=======
+>>>>>>> 117dcb9f65d9700e060e67b7d4b820f3af824d97
 =======
 >>>>>>> 117dcb9f65d9700e060e67b7d4b820f3af824d97
       }
