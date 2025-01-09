@@ -20,17 +20,13 @@ S.Title = styled.ul`
     font-size: 25px;
     margin-bottom: 5px;
   }
-
-  & li:nth-child(2) {
-    font-size: 16px;
-  }
 `;
 
 S.Ul = styled.ul`
-  margin: 20px 0;
+  margin: 40px 0;
 
   & li {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 
     &:hover {
       color: #ff2f6e; 

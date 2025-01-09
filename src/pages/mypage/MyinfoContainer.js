@@ -15,6 +15,9 @@ const MyinfoContainer = () => {
           <Link to={"/my-review-list"}>
             <li>내가 쓴 리뷰</ li> 
           </Link>
+          <Link to={"/mypage"}>
+            <li>개인정보 확인/수정</ li> 
+          </Link>
           <hr />
       </S.Ul>
     </S.LeftSection>
