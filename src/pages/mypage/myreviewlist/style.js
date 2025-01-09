@@ -67,6 +67,13 @@ S.title = styled.div`
     color: red !important;
   }
 `;
+S.reviewitem =styled.div`
+border-bottom: 1px solid gray;
+margin-top: 10px;
+
+`
+
+
 
 
 export default S;
