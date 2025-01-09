@@ -71,7 +71,7 @@ const Layout = () => {
             <p>이달의 영화</p>
           </NavLink>
           <NavLink to={"/movieblog"}>
-            <p>영화 블로그</p>
+            <p>영화 게시판</p>
           </NavLink>
           <NavLink to={"/mypage"}>
             <p>마이 페이지</p>
