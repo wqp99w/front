@@ -4,6 +4,7 @@ import S from './style';
 
 const MovieBlog = () => {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [posts, setPosts] = useState([
     {
       id: 1,
@@ -17,16 +18,20 @@ const MovieBlog = () => {
     }
   ]);
 
-  const handleCreatePost = () => {
-    navigate('/createblog');
-  };
+  const handleMyBlogClick = () =>{
+    if(!isLoggedIn){
+      navigate("/is-not-login");
+    }else{
+      navigate("/myblog");
+    }
+  }
 
   return (
     <S.Container>
       <S.Header>
         <h1>영화 리뷰 게시판</h1>
         <div>
-          <NavLink to="/myblog">내 게시판</NavLink>
+          <button onClick={handleMyBlogClick}>내 게시판</button>
         </div>
       </S.Header>
       <S.PostList>

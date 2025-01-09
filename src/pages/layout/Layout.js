@@ -77,7 +77,9 @@ const Layout = () => {
             <p>마이 페이지</p>
           </NavLink>
           <div className="search-bar">
-            <input type="text" placeholder="Search contents, people, collections, ..." />
+            <S.Serch>
+              <input type="text" placeholder="Search contents, people, collections, ..." />
+            </S.Serch>
             <button onClick={handleLoginClick}>Login</button>
             <button onClick={handleSignUpClick}>Sign Up</button>
           </div>
