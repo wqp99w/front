@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
 import S from './style';
 
-const MovieBlog = () => {
+const MoviePost = () => {
   const navigate = useNavigate();
   const [posts, setPosts] = useState([
     {
@@ -18,15 +18,15 @@ const MovieBlog = () => {
   ]);
 
   const handleCreatePost = () => {
-    navigate('/createblog');
+    navigate('/createpost');
   };
 
   return (
     <S.Container>
       <S.Header>
-        <h1>영화 리뷰 블로그</h1>
+        <h1>영화 리뷰 게시판</h1>
         <div>
-          <NavLink to="/myblog">내 블로그</NavLink>
+          <NavLink to="/mypost">내 게시판</NavLink>
         </div>
       </S.Header>
       <S.PostList>
@@ -41,4 +41,4 @@ const MovieBlog = () => {
   );
 };
 
-export default MovieBlog;
+export default MoviePost;

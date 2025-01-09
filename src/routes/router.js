@@ -2,13 +2,13 @@ import { createBrowserRouter } from 'react-router-dom'
 import Layout from '../pages/layout/Layout';
 import MovieContainer from '../pages/movie/MovieContainer';
 import MainContainer from '../pages/main/MainContainer';
-import MovieBlogContainer from '../pages/movieblog/MovieBlogContainer';
+import MoviePostContainer from '../pages/moviepost/MoviePostContainer';
 import WeekMovieContainer from '../pages/weekmovie/WeekMovieContainer';
 import MovieReviewContainer from '../pages/movie/moviereview/MovieReviewContainer';
 import MyPageContainer from '../pages/mypage/MyPageContainer';
 import MylistConatiner from '../pages/mypage/mylist/MylistConatiner';
-import CreateBlogContainer from '../pages/movieblog/Myblog/CreateBlogContainer';
-import MyBlogContainer from '../pages/movieblog/Myblog/MyBlogContainer';
+import CreatePostContainer from '../pages/moviepost/Mypost/CreatePostContainer';
+import MyPostContainer from '../pages/moviepost/Mypost/MyPostContainer';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
         element : <MovieContainer/>
       },
       {
-        path : "/movieblog",
-        element : <MovieBlogContainer/>
+        path : "/moviepost",
+        element : <MoviePostContainer/>
       },
       {
         path : "/weekmovie",
@@ -43,12 +43,12 @@ const router = createBrowserRouter([
         element : <MylistConatiner/>
       },
       {
-        path : "/createblog",
-        element : <CreateBlogContainer/>
+        path : "/createpost",
+        element : <CreatePostContainer/>
       },
       {
-        path : "/myblog",
-        element : <MyBlogContainer/>
+        path : "/mypost",
+        element : <MyPostContainer/>
       }
     ]
   }

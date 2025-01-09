@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import S from './style';
 
-const CreateBlog = () => {
+const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [movie, setMovie] = useState('');
   const [score, setScore] = useState('');
@@ -16,17 +16,17 @@ const CreateBlog = () => {
     console.log({ title, score, review });
 
     
-    navigate('/movieblog');
+    navigate('/moviePost');
   };
 
   return (
     <div>
       <S.Main>
-        <h1>영화 블로그 작성</h1>
+        <h1>영화 게시글 작성성</h1>
           <S.Form onSubmit={handleSubmit}>
 
             <div>
-              <label htmlFor="title">게시글 제목:</label>
+              <label htmlFor="title">게시판판 제목:</label>
               <S.Input>
                 <input 
                   type="text"
@@ -87,4 +87,4 @@ const CreateBlog = () => {
   );
 };
 
-export default CreateBlog;
+export default CreatePost;
