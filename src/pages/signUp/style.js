@@ -44,6 +44,18 @@ S.password = styled.div`
   }
 `
 
+S.PhoneNumber = styled.div`
+  margin-bottom: 20px;
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color : #000;
+  }
+`
+
 S.signUp = styled.div`
   display: flex;
   justify-content: center;
@@ -83,6 +95,9 @@ S.ModalContainer = styled.div`
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   width: 300px;
-  height:200px;
+  height:350px;
 `;
+
+
+
 export default S;
