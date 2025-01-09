@@ -24,9 +24,9 @@ const MovieBlog = () => {
   return (
     <S.Container>
       <S.Header>
-        <h1>영화 리뷰 블로그</h1>
+        <h1>영화 리뷰 게시판</h1>
         <div>
-          <NavLink to="/myblog">내 블로그</NavLink>
+          <NavLink to="/myblog">내 게시판</NavLink>
         </div>
       </S.Header>
       <S.PostList>

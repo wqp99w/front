@@ -22,11 +22,11 @@ const CreateBlog = () => {
   return (
     <div>
       <S.Main>
-        <h1>영화 블로그 작성</h1>
+        <h1>영화 게시글 작성</h1>
           <S.Form onSubmit={handleSubmit}>
 
             <div>
-              <label htmlFor="title">게시글 제목:</label>
+              <label htmlFor="title">게시판 제목:</label>
               <S.Input>
                 <input 
                   type="text"
