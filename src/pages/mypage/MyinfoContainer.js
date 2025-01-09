@@ -12,6 +12,9 @@ const MyinfoContainer = () => {
           <Link to={"/my-list"}>
             <li>내가 쓴 게시판</ li> 
           </Link>
+          <Link to={"/my-list"}>
+            <li>내가 쓴 리뷰</ li> 
+          </Link>
           <hr />
       </S.Ul>
     </S.LeftSection>
