@@ -20,9 +20,9 @@ S.Header = styled.header`
   }
 
   div {
-    a {
+    button {
       margin-left: 20px;
-      color: #007bff;
+      color: blue;
       text-decoration: none;
       font-size: 16px;
 

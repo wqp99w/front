@@ -10,6 +10,7 @@ import MylistConatiner from '../pages/mypage/mylist/MylistConatiner';
 import CreateBlogContainer from '../pages/movieblog/Myblog/CreateBlogContainer';
 import MyBlogContainer from '../pages/movieblog/Myblog/MyBlogContainer';
 import MyReviewContainer from '../pages/mypage/myreviewlist/MyReviewContainer';
+import IsNotLoginContainer from '../pages/isnotlogin/IsNotLoginContainer';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path : "/my-review-list",
         element :<MyReviewContainer/>
+      },
+      {
+        path : "/is-not-login",
+        element :<IsNotLoginContainer/>
       }
     ]
   }

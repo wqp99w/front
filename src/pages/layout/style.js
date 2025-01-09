@@ -62,6 +62,13 @@ S.Header = styled.div`
   }
 `;
 
+S.Serch = styled.div`
+
+  input{
+    color:black;
+  }
+`
+
 S.MainContent = styled.div`
   padding: 2rem;
 

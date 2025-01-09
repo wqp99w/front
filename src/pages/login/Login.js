@@ -9,7 +9,7 @@ const Login = ({ onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // 회원가입 로직 추가
-    console.log('회원가입:', { email, password });
+    console.log('로그인:', { email, password });
     onClose(); // 모달 닫기
   };
 
